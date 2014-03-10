@@ -11,7 +11,9 @@ var BJLL = BJLL || {};
 			threshold = parseInt( BJLL.threshold );
 		}
 
-		$('.lazy-hidden').not('.data-lazy-ready').one( 'scrollin.bj_lazy_load', { distance: threshold }, function() {
+		$('.lazy-hidden')
+			.not('.data-lazy-ready')
+			.one( 'scrollin.bj_lazy_load', { distance: threshold }, function() {
 
 			var $el = $( this ),
 				data_lazy_type = $el.attr( 'data-lazy-type' );
@@ -110,7 +112,7 @@ var BJLL = BJLL || {};
 		return dec;
 	}
 	
-	$( document ).on( 'ready', bj_lazy_load_init );
+	$( document ).ready( setTimeout(bj_lazy_load_init, 0) );
 	if ( 'yes' == BJLL.infinite_scroll ) {
 		$( window ).on( 'scroll', bj_lazy_load_init );
 	}

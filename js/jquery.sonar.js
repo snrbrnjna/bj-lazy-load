@@ -317,7 +317,7 @@ var body = doc.body,
   },
 
   addSonar = function( elem, options ) {
-  // console.log("Really adding " + elem.id);
+  // console.log("Really adding ", elem);
     // Prepare arguments.
     var distance = options.px,
       full = options.full,
