@@ -112,7 +112,7 @@ var BJLL = BJLL || {};
 		return dec;
 	}
 	
-	$( document ).ready( setTimeout(bj_lazy_load_init, 0) );
+	$( document ).ready( bj_lazy_load_init );
 	if ( 'yes' == BJLL.infinite_scroll ) {
 		$( window ).on( 'scroll', bj_lazy_load_init );
 	}
